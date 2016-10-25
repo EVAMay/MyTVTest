@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.open.androidtvwidget.view.LinearMainLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/home_bg"
+    tools:context="com.myapp.mytvtest.mytvtest.activity.MainActivity">
+
+<android.support.design.widget.TabLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:id="@+id/tableLayout_main"
+    >
+
+</android.support.design.widget.TabLayout>
+    <com.open.androidtvwidget.view.ViewPagerTV
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:id="@+id/viewPager_main">
+
+    </com.open.androidtvwidget.view.ViewPagerTV>
+</com.open.androidtvwidget.view.LinearMainLayout>

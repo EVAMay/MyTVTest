@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.open.androidtvwidget.view.RelativeMainLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <com.open.androidtvwidget.view.MainLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_lay"
+        android:layout_marginLeft="10dp">
+        <com.open.androidtvwidget.view.GridViewTV
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gridView_domestic"
+            android:numColumns="4"
+            android:horizontalSpacing="10dp"
+            android:verticalSpacing="10dp"
+            android:clipChildren="false"
+            android:scrollbars="none">
+
+        </com.open.androidtvwidget.view.GridViewTV>
+    </com.open.androidtvwidget.view.MainLayout>
+
+<com.open.androidtvwidget.view.MainUpView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainUpView"/>
+
+
+
+</com.open.androidtvwidget.view.RelativeMainLayout>

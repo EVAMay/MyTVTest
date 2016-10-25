@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.open.androidtvwidget.view.LinearMainLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+<com.open.androidtvwidget.view.RelativeMainLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.open.androidtvwidget.view.SmoothHorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+        <com.open.androidtvwidget.view.MainLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_lay"
+            android:layout_marginLeft="20dp">
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/linear_bg">
+                <com.open.androidtvwidget.view.ReflectItemView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:isReflect="true"
+                    android:id="@+id/video_item_hot">
+                    <ijkplayer.media.IjkVideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ijkVideoView">
+                    </ijkplayer.media.IjkVideoView>
+                </com.open.androidtvwidget.view.ReflectItemView>
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <com.open.androidtvwidget.view.ReflectItemView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:id="@+id/live_item_hot"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:isReflect="true">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/live_bg">
+
+                            <TextView
+
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="直播"
+                                android:textSize="30dp"
+                                android:textColor="#fff"/>
+                        </RelativeLayout>
+                    </com.open.androidtvwidget.view.ReflectItemView>
+
+                    <com.open.androidtvwidget.view.ReflectItemView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/demand_item_hot"
+                        android:focusable="true"
+                        app:isReflect="true">
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/demand_bg">
+                            <TextView
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="点播"
+                                android:textSize="30dp"
+                                android:textColor="#fff"/>
+                        </RelativeLayout>
+                    </com.open.androidtvwidget.view.ReflectItemView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.open.androidtvwidget.view.MainLayout>
+
+
+    </com.open.androidtvwidget.view.SmoothHorizontalScrollView>
+
+<com.open.androidtvwidget.view.MainUpView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainUpView">
+
+</com.open.androidtvwidget.view.MainUpView>
+
+</com.open.androidtvwidget.view.RelativeMainLayout>
+
+</com.open.androidtvwidget.view.LinearMainLayout>

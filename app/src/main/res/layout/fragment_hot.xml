@@ -31,11 +31,21 @@
                     android:focusable="true"
                     app:isReflect="true"
                     android:id="@+id/video_item_hot">
-                    <ijkplayer.media.IjkVideoView
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/ijkVideoView">
-                    </ijkplayer.media.IjkVideoView>
+                        android:layout_height="match_parent">
+                        <ijkplayer.media.IjkVideoView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/ijkVideoView">
+                        </ijkplayer.media.IjkVideoView>
+                        <pl.droidsonroids.gif.GifImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/gif_loading"
+                            android:id="@+id/gif_hot"/>
+                    </RelativeLayout>
+
                 </com.open.androidtvwidget.view.ReflectItemView>
 
                 <LinearLayout
@@ -59,7 +69,7 @@
                             android:background="@drawable/live_bg">
 
                             <TextView
-
+                                android:clickable="true"
                                 android:gravity="center"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"

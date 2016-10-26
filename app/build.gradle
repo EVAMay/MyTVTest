@@ -26,7 +26,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.0'
     testCompile 'junit:junit:4.12'
-
     compile 'tv.danmaku.ijk.media:ijkplayer-java:0.5.1'
     compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.5.1'
     compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.5.1'
@@ -36,4 +35,7 @@ dependencies {
     compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.5.1'
     compile 'com.android.support:design:24.2.0'
     compile project(':androidtvwidget')
+    //    compile project(':ijkplayer')
+    //    compile project(':ijkplayer_exo')
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.2'
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -27,27 +28,30 @@
         <com.open.androidtvwidget.view.LinearMainLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:orientation="horizontal">
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="01:32:34"
+                android:text="00:00"
                 android:textColor="@color/white"
                 android:id="@+id/currentTime_play"/>
             <SeekBar
                 android:layout_width="0dp"
                 android:layout_weight="8"
                 android:layout_height="match_parent"
-                android:progress="0"/>
+                android:progress="0"
+                android:id="@+id/seekBar_play"
+                android:focusable="true"
+                android:layout_gravity="center"/>
             <TextView
                 android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="01:33:34"
+                android:text="00:00"
                 android:textColor="@color/white"
                 android:id="@+id/durationTime_play"/>
         </com.open.androidtvwidget.view.LinearMainLayout>
@@ -58,24 +62,31 @@
             android:layout_weight="2"
             android:orientation="horizontal"
             android:gravity="center">
+
         <ImageButton
+
             android:id="@+id/rewind_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_fast_rewind"
-            style="@style/Widget.AppCompat.ActionButton"/>
+            style="@style/Widget.AppCompat.ActionButton"
+            android:focusable="true"/>
+
             <ImageButton
                 android:id="@+id/start_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/play_button"
-                style="@style/Widget.AppCompat.ActionButton"/>
+                style="@style/Widget.AppCompat.ActionButton"
+                android:focusable="true"
+                />
             <ImageButton
                 android:id="@+id/forward_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_fast_forward"
-                style="@style/Widget.AppCompat.ActionButton"/>
+                style="@style/Widget.AppCompat.ActionButton"
+                android:focusable="true"/>
         </com.open.androidtvwidget.view.LinearMainLayout>
     </com.open.androidtvwidget.view.LinearMainLayout>
     <pl.droidsonroids.gif.GifImageView
@@ -83,6 +94,13 @@
         android:layout_height="match_parent"
         android:src="@mipmap/gif_loading"
         android:id="@+id/gif_play"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:id="@+id/textPercent"
+        android:textColor="#fff"
+        android:text="进度显示"/>
     <com.open.androidtvwidget.view.MainUpView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
